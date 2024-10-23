@@ -19,5 +19,5 @@ from .views import ListProductsView, AddProductFormView
 
 urlpatterns = [
     path("products_list/", ListProductsView.as_view(), name='list_products'),
-    path('add_product/', AddProductFormView.as_view(), name='add_product')
+    path('add_product/', AddProductFormView.as_view(), name='add_product'),
 ]
