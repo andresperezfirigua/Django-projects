@@ -1,15 +1,14 @@
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, FormView
+from django.views.generic import FormView, ListView
 from .models import Product
 from .forms import ProductForm
 
 
-class ListProductsView(TemplateView):
+class ProductListView(ListView):
+    model = Product
     template_name = "products/products_list.html"
-
-    def get_context_data(self):
-        return {"products_list": Product.objects.all().order_by("name")}
+    context_object_name = 'products'
 
 
 class AddProductFormView(FormView):
