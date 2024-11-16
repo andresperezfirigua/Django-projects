@@ -7,9 +7,8 @@ __pycache__/
 *.so
 
 # Media 
-media/
+images/
 # Distribution / packaging
-migrations/
 .Python
 build/
 develop-eggs/
